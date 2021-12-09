@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-            if(!password.matches(".*[1-9].*".toRegex())){
+            if(!password.matches(".*[0-9].*".toRegex())){
                 editTextPassword.error = "Password must contain digits also"
                 return@setOnClickListener
 
