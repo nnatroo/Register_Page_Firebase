@@ -60,13 +60,6 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-            if(password != repeatedPassword){
-                editTextRepeatPassword.error = "Those passwords didn’t match. Try again."
-                return@setOnClickListener
-
-            }
-
-
             if(!password.matches(".*[1-9].*".toRegex())){
                 editTextPassword.error = "Password must contain digits also"
                 return@setOnClickListener
@@ -77,6 +70,12 @@ class MainActivity : AppCompatActivity() {
             if((!password.matches(".*[a-z].*".toRegex())) && (!password.matches(".*[A-Z].*".toRegex()))){
                 editTextPassword.error = "Password must contain letters also"
                 return@setOnClickListener
+            }
+
+            if(password != repeatedPassword){
+                editTextRepeatPassword.error = "Those passwords didn’t match. Try again."
+                return@setOnClickListener
+
             }
 
 
